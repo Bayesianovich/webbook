@@ -5,28 +5,28 @@ description: "PRML 概率分布章节中文导读。"
 
 # 第 2 章 概率分布
 
-## 本章目标
+## 本章目标 {#ch2-goals}
 
 - 统一离散与连续随机变量的表示方式。
 - 回顾常用分布及其在建模中的角色。
 - 建立期望、方差、协方差与条件概率的计算框架。
 
-## 关键内容
+## 关键内容 {#ch2-core-content}
 
-### 常见分布
+### 常见分布 {#ch2-common-distributions}
 
 - Bernoulli / Binomial
 - Gaussian
 - Gamma / Beta
 - Dirichlet
 
-### 推导练习占位
+### 推导练习占位 {#ch2-derivation-placeholder}
 
 后续补充：
 
 - 贝叶斯公式在共轭先验下的更新推导
 - 多元高斯分布边缘化与条件化推导
 
-## 小结
+## 小结 {#ch2-summary}
 
 本章是后续参数估计、近似推断和图模型的基础。
