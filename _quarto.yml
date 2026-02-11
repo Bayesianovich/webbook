@@ -1,0 +1,17 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "我的数学笔记"
+  author: "Bayesiano"
+  date: "2026-02-12"
+  chapters:
+    - index.qmd
+    - formula.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
