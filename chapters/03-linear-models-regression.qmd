@@ -170,6 +170,34 @@ $$
 - 如果需要可信区间、不确定性量化或小样本稳健性，优先考虑贝叶斯线性回归。
 - 通过行内公式如 $R^2$、$\lambda$、$\alpha/\beta$ 追踪超参数含义，通过行间公式把推导主链条写清楚。
 
+## 3.8 图像与视频
+
+下面这些材料可以作为本章的直觉补充，帮助把公式和图形对应起来。
+
+![线性回归示意：散点与拟合直线](https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg){fig-alt="Linear regression illustration" width="70%"}
+
+![偏差-方差权衡示意图](https://upload.wikimedia.org/wikipedia/commons/a/a1/Bias_and_variance_contributing_to_total_error.svg){fig-alt="Bias variance tradeoff illustration" width="70%"}
+
+### 视频 1：线性回归直觉与最小二乘
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nk2CQITm_eo" title="Linear Regression, Clearly Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### 视频 2：贝叶斯视角下的线性回归
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/Vkfnf6wM7zk" title="Bayesian Linear Regression" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+如果你更常用中文平台，也可以在 Bilibili 搜索关键词：`线性回归 最小二乘`、`贝叶斯线性回归`、`PRML 第3章`。
+
+## 3.9 参考链接
+
+- PRML 官方书页（作者主页）：<https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/>
+- The Elements of Statistical Learning（免费 PDF）：<https://hastie.su.domains/ElemStatLearn/>
+- ISLR（Introduction to Statistical Learning，含实验与代码）：<https://www.statlearning.com/>
+- Stanford CS229 线性回归笔记：<https://cs229.stanford.edu/main_notes.pdf>
+- Scikit-learn 线性模型文档：<https://scikit-learn.org/stable/modules/linear_model.html>
+- Ridge Regression（Wikipedia）：<https://en.wikipedia.org/wiki/Ridge_regression>
+- Bayesian Linear Regression（Wikipedia）：<https://en.wikipedia.org/wiki/Bayesian_linear_regression>
+
 ## 小结
 
 本章从
