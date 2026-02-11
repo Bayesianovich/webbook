@@ -1,4 +1,84 @@
-/* Indent every body paragraph by two character widths. */
-.quarto-container p {
+:root {
+  --wb-bg-top: #f3f7fb;
+  --wb-bg-bottom: #fcf9f4;
+  --wb-ink: #1f2937;
+  --wb-muted: #4b5563;
+  --wb-accent: #0b5cab;
+  --wb-warm: #b54708;
+  --wb-strong: #8e1f63;
+}
+
+body {
+  color: var(--wb-ink);
+  background:
+    radial-gradient(circle at 10% 0%, #dceafe 0%, rgba(220, 234, 254, 0) 35%),
+    linear-gradient(180deg, var(--wb-bg-top), var(--wb-bg-bottom));
+}
+
+.quarto-container {
+  max-width: 920px;
+}
+
+.quarto-container .content {
+  font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Avenir Next", "PingFang SC", "Noto Sans SC", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+p {
   text-indent: 2em;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+li p,
+blockquote p,
+.callout p,
+td p {
+  text-indent: 0;
+}
+
+strong {
+  color: #111827;
+  font-weight: 760;
+}
+
+em {
+  color: #334155;
+}
+
+.text-accent {
+  color: var(--wb-accent);
+  font-weight: 700;
+}
+
+.text-warm {
+  color: var(--wb-warm);
+  font-weight: 700;
+}
+
+.text-strong {
+  color: var(--wb-strong);
+  font-weight: 800;
+}
+
+.mark-soft {
+  background: linear-gradient(transparent 58%, #fef3c7 58%);
+  padding: 0 0.1em;
+}
+
+.callout {
+  border-radius: 12px;
+  border-width: 1px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.callout .callout-title {
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
