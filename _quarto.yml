@@ -24,6 +24,34 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    include-after-body:
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.createElement('button');
+            toggle.className = 'immersive-toggle';
+            toggle.innerHTML = '📖';
+            toggle.title = '切换沉浸式阅读 (ESC退出)';
+            document.body.appendChild(toggle);
+            if (localStorage.getItem('immersive-mode') === 'true') {
+              document.body.classList.add('immersive-mode');
+              toggle.innerHTML = '←';
+            }
+            toggle.addEventListener('click', function() {
+              document.body.classList.toggle('immersive-mode');
+              const isImmersive = document.body.classList.contains('immersive-mode');
+              localStorage.setItem('immersive-mode', isImmersive);
+              toggle.innerHTML = isImmersive ? '←' : '📖';
+            });
+            document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape' && document.body.classList.contains('immersive-mode')) {
+                document.body.classList.remove('immersive-mode');
+                localStorage.setItem('immersive-mode', 'false');
+                toggle.innerHTML = '📖';
+              }
+            });
+          });
+          </script>
     toc: true
     number-sections: true
     metadata:
