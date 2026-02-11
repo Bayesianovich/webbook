@@ -42,31 +42,49 @@ body {
 body.immersive-mode #quarto-sidebar,
 body.immersive-mode #quarto-margin-sidebar,
 body.immersive-mode .quarto-secondary-nav,
-body.immersive-mode header.fixed-top {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s ease;
+body.immersive-mode header.fixed-top,
+body.immersive-mode #quarto-header {
+  display: none !important;
 }
 
 body.immersive-mode .content {
-  max-width: 680px !important;
+  max-width: 880px !important;
   margin: 0 auto;
-  padding: 3rem 4rem;
-  background: linear-gradient(to bottom, #fffffe, #fffcf7);
-  border-radius: 2px;
+  padding: 1.5rem 5rem 4rem 5rem;
+  background: #ffffff;
   box-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 20px 60px rgba(0, 0, 0, 0.03);
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 30px 80px rgba(0, 0, 0, 0.06);
   min-height: 100vh;
 }
 
 body.immersive-mode #quarto-content {
   padding: 0;
-  background: #f5f4f0;
+  background: #e8e6e0;
 }
 
 body.immersive-mode .page-columns {
   display: block;
+}
+
+/* 沉浸模式下隐藏面包屑和标题元数据 */
+body.immersive-mode .quarto-title-meta {
+  display: none;
+}
+
+body.immersive-mode .quarto-title-block {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 2rem 0 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+body.immersive-mode h1.title {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--wb-line);
+  padding-bottom: 0.8rem;
 }
 
 /* 沉浸模式切换按钮 */
