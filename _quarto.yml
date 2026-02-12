@@ -10,8 +10,8 @@ book:
   subtitle: "学习翻译与推导笔记"
   author: "Bayesiano"
   date: "2026-02-12"
-  site-url: "https://bayesianovich.github.io/webbook/"
-  repo-url: "https://github.com/Bayesianovich/webbook"
+  site-url: "https://bayesianovich.github.io/prml-book/"
+  repo-url: "https://github.com/Bayesianovich/prml-book"
   chapters:
     - index.qmd
     - chapters/01-introduction.qmd
