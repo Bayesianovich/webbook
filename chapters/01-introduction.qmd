@@ -5,6 +5,10 @@ description: "PRML 导论章节中文导读。"
 
 ## 第 1 章 导论
 
+::: {.chapter-opening-lead}
+本章作为全书入口，先建立 PRML 的问题框架、概率视角与学习路线。
+:::
+
 ### 本章目标 {#ch1-goals}
 
 - 说明 PRML 的问题设置与学习范式。

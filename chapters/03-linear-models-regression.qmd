@@ -10,7 +10,9 @@ keywords:
 
 ## 第 3 章 线性模型：回归
 
-本章从最小二乘出发，逐步连接到正则化、MLE/MAP 与贝叶斯线性回归。{.chapter-opening-lead}
+::: {.chapter-opening-lead}
+本章从最小二乘出发，逐步连接到正则化、MLE/MAP 与贝叶斯线性回归。
+:::
 
 ### 本章目标
 
