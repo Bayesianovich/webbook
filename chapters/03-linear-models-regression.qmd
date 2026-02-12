@@ -208,6 +208,37 @@ $$
 - Ridge Regression（Wikipedia）：<https://en.wikipedia.org/wiki/Ridge_regression>
 - Bayesian Linear Regression（Wikipedia）：<https://en.wikipedia.org/wiki/Bayesian_linear_regression>
 
+## 3.10 样式 Demo
+
+这一节只用于查看页面样式效果（figure 卡片化与表格卡片化）。
+
+![Demo 图：线性回归示意图](https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg){fig-alt="Linear regression demo figure" width="75%"}
+
+| 模型 | 训练误差 | 验证误差 | 备注 |
+|---|---:|---:|---|
+| 线性回归（无正则） | 0.82 | 1.37 | 可能过拟合 |
+| 岭回归（$\lambda=0.1$） | 0.90 | 1.05 | 泛化更稳健 |
+| 贝叶斯线性回归 | 0.94 | 1.02 | 可给出不确定性 |
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<double> y_true{3.0, -0.5, 2.0, 7.0};
+    std::vector<double> y_pred{2.5, 0.0, 2.1, 7.8};
+
+    double sse = 0.0;
+    for (std::size_t i = 0; i < y_true.size(); ++i) {
+        double e = y_true[i] - y_pred[i];
+        sse += e * e;
+    }
+
+    std::cout << "SSE = " << sse << std::endl;
+    return 0;
+}
+```
+
 ## 小结
 
 本章从

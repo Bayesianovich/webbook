@@ -28,26 +28,54 @@ format:
       - text: |
           <script>
           document.addEventListener('DOMContentLoaded', function() {
-            const toggle = document.createElement('button');
-            toggle.className = 'immersive-toggle';
-            toggle.innerHTML = '📖';
-            toggle.title = '切换沉浸式阅读 (ESC退出)';
-            document.body.appendChild(toggle);
+            const immersiveToggle = document.createElement('button');
+            immersiveToggle.className = 'immersive-toggle';
+            immersiveToggle.innerHTML = '📖';
+            immersiveToggle.title = '切换沉浸式阅读 (ESC退出)';
+            document.body.appendChild(immersiveToggle);
+
+            const themeToggle = document.createElement('button');
+            themeToggle.className = 'theme-toggle';
+            themeToggle.title = '切换暗黑/白天模式';
+            document.body.appendChild(themeToggle);
+
+            function setTheme(mode) {
+              const isDark = mode === 'dark';
+              document.body.classList.toggle('theme-dark', isDark);
+              localStorage.setItem('theme-mode', mode);
+              themeToggle.innerHTML = isDark ? '☀️' : '🌙';
+            }
+
+            const savedTheme = localStorage.getItem('theme-mode');
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+              setTheme(savedTheme);
+            } else {
+              const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+              setTheme(prefersDark ? 'dark' : 'light');
+            }
+
+            themeToggle.addEventListener('click', function() {
+              const toDark = !document.body.classList.contains('theme-dark');
+              setTheme(toDark ? 'dark' : 'light');
+            });
+
             if (localStorage.getItem('immersive-mode') === 'true') {
               document.body.classList.add('immersive-mode');
-              toggle.innerHTML = '←';
+              immersiveToggle.innerHTML = '←';
             }
-            toggle.addEventListener('click', function() {
+
+            immersiveToggle.addEventListener('click', function() {
               document.body.classList.toggle('immersive-mode');
               const isImmersive = document.body.classList.contains('immersive-mode');
               localStorage.setItem('immersive-mode', isImmersive);
-              toggle.innerHTML = isImmersive ? '←' : '📖';
+              immersiveToggle.innerHTML = isImmersive ? '←' : '📖';
             });
+
             document.addEventListener('keydown', function(e) {
               if (e.key === 'Escape' && document.body.classList.contains('immersive-mode')) {
                 document.body.classList.remove('immersive-mode');
                 localStorage.setItem('immersive-mode', 'false');
-                toggle.innerHTML = '📖';
+                immersiveToggle.innerHTML = '📖';
               }
             });
           });
