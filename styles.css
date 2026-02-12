@@ -28,7 +28,7 @@
   --wb-line: #e0e0e0;
   --sidebar-width: 240px;
   --toc-width: 200px;
-  --content-max-width: 880px;
+  --content-max-width: 1080px;
   --font-body: 'TsangerJinKai', 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', serif;
   --font-heading: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
 }
@@ -380,6 +380,6 @@ em {
   }
 
   .content {
-    max-width: 920px !important;
+    max-width: 1160px !important;
   }
 }
