@@ -281,6 +281,21 @@ h1.title {
   margin-top: 0.45rem;
 }
 
+/* 每章开头导语：仅对显式标记的首段生效 */
+.content p.chapter-opening-lead {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4b5563;
+  margin-top: 0.7rem;
+  margin-bottom: 1.25rem;
+}
+
+.content p.chapter-opening-lead::first-letter {
+  font-size: 1.28em;
+  font-weight: 700;
+  color: #111827;
+}
+
 /* 章节正文里的一级标题（#）与 title 区分开单独控尺寸 */
 .content > h1 {
   font-size: calc(var(--wb-h1-size) - 0.14rem);
@@ -794,6 +809,11 @@ body.theme-dark .theme-toggle:hover {
   .quarto-title-block {
     border-radius: 10px;
     padding: 0.9rem 0.9rem 0.75rem 0.9rem;
+  }
+
+  .content p.chapter-opening-lead {
+    font-size: 1.02rem;
+    margin-bottom: 1rem;
   }
 
   #quarto-sidebar,
